@@ -2,7 +2,6 @@ pkgs: with pkgs;
 
 let 
   py-pkg-list = import ./py_pkg.nix;
-  ctf = import ./ctf.nix pkgs;
 in [
     # python
     python3
@@ -19,4 +18,5 @@ in [
     # tools
 
     # misc
-] ++ ctf
+    nodejs
+]
