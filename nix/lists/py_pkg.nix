@@ -8,4 +8,6 @@ ps: with ps;
     numpy
     matplotlib
     pwntools
+    unicorn
+    angr
 ]

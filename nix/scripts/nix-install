@@ -1,1 +1,1 @@
-sed -i '$i\    '"$1" /home/lily/code/dotfiles/nix/lists/basic_packages.nix
+sed -i '$i\    '"$1" /home/lily/code/dotfiles/nix/lists/base.nix
