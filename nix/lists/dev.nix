@@ -11,7 +11,6 @@ in [
     texlive.combined.scheme-medium
 
     # python
-    python3
     (python3.withPackages py-pkg-list)
 
     # sage

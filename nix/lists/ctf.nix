@@ -6,7 +6,6 @@ pkgs: with pkgs;
     ghidra
     apktool
     aflplusplus
-    checksec
     capstone
     patchelf
     binutils

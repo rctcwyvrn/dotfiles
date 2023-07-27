@@ -1,6 +1,6 @@
 pkgs: with pkgs; [
     spotify
-    chromium
+    # chromium # annoying
     vscode
     discord
     dolphin
