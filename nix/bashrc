@@ -8,6 +8,15 @@
 alias ls='ls --color=auto'
 alias ll="ls -la"
 alias grep='grep --color=auto'
-PS1='[\u@\h \W]\$ '
+
+BASE_PS1='\e[32m[\u@\h \W]\$\e[0m '
+PS1=$BASE_PS1
+if [[ -n "$IN_NIX_SHELL" ]]; then
+  if [[ -n "$NIX_SHELL_NAME" ]]; then
+    export PS1="\e[36m($NIX_SHELL_NAME)\e[0m $PS1"
+   else
+    export PS1="\e[36m(nix-shell)\e[0m $PS1"
+   fi
+fi
 
 export PATH=$PATH:/home/lily/scripts/nix-scripts

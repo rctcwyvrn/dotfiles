@@ -1,11 +1,11 @@
 pkgs: with pkgs; 
 
 let 
-  py-pkg-list = import ./py_pkg.nix;
+  py-pkg-list = import ./pip.nix;
   lily-vim = import ./vim.nix pkgs;
 in [
     # vim
-    lily-vim
+    lily-vim # doesn't work
 
     # latex stuff
     texlive.combined.scheme-medium
@@ -22,11 +22,13 @@ in [
     rustc
     cargo
 
+    # js
+    nodejs
+
     # tools
     gdb
 
     # misc
-    nodejs
     flamegraph
     docker
     jq

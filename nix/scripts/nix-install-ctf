@@ -1,1 +1,0 @@
-sed -i '$i\    '"$1" /home/lily/code/dotfiles/nix/lists/ctf.nix

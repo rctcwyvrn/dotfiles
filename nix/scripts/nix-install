@@ -1,1 +1,8 @@
-sed -i '$i\    '"$1" /home/lily/code/dotfiles/nix/lists/base.nix
+#! /bin/bash
+profile="/nix/var/nix/profiles/per-user/lily/$1"
+packages="nixpkgs.lily.$1" 
+target=$2
+list=/home/lily/code/dotfiles/nix/lists/$1.nix
+echo "Installing $target to list $list ($profile, $packages)"
+sed -i '$i\    '"$target" $list
+nix-env --install --remove-all --attr "$packages" --profile "$profile"

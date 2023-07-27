@@ -1,1 +1,4 @@
-nix-shell /home/lily/code/dotfiles/nix/shell.nix "$@"
+#! /bin/bash
+shell="/home/lily/code/dotfiles/nix/shells/$1.nix"
+echo "Activating shell $shell"
+nix-shell "$shell" "${@:2}"

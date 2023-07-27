@@ -6,4 +6,6 @@ pkgs: with pkgs; [
     # nur.repos.mic92.hello-nur
     wget
     vim
+    syncthing
+    obsidian
 ]
