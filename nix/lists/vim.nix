@@ -1,10 +1,9 @@
 pkgs: 
 
 let 
-    inherit (pkgs) vim_configurable;
+    inherit (pkgs) vim-full;
 in
-    vim_configurable.customize {
-        name = "lily-vim";
+    vim-full.customize {
         vimrcConfig.packages.myVimPackage = with pkgs.vimPlugins; {
             # loaded on launch
             start = [ syntastic fugitive lightline-vim ];
