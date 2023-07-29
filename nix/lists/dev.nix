@@ -4,32 +4,34 @@ let
   py-pkg-list = import ./pip.nix;
   lily-vim = import ./vim.nix pkgs;
 in [
-    # vim
-    lily-vim # doesn't work
+  # vim
+  lily-vim # doesn't work
 
-    # latex stuff
-    texlive.combined.scheme-medium
+  # latex stuff
+  texlive.combined.scheme-medium
 
-    # python
-    (python3.withPackages py-pkg-list)
+  # python
+  (python3.withPackages py-pkg-list)
 
-    # sage
-    sage
+  # sage
+  sage
 
-    # rust
-    # rustup
-    rustc
-    cargo
+  # rust
+  # rustup
+  rustc
+  cargo
 
-    # js
-    nodejs
+  # js
+  nodejs
 
-    # tools
-    gdb
+  # tools
+  gdb
 
-    # misc
-    flamegraph
-    docker
-    jq
-    nasm
+  # misc
+  flamegraph
+  docker
+  jq
+  nasm
+  wireguard-tools
+  google-cloud-sdk
 ]

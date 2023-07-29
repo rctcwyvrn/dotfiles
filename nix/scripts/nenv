@@ -1,5 +1,5 @@
 #! /bin/bash
-profile="/nix/var/nix/profiles/per-user/lily/$1"
+profile="/home/lily/.local/state/nix/profiles/$1"
 packages="nixpkgs.lily.$1" 
 echo "Activating $profile with packages $packages"
 nix-env --install --remove-all --attr "$packages" --profile "$profile"

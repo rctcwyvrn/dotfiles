@@ -1,5 +1,5 @@
 {
-    pkgs ? import <nixpkgs> {}
+    pkgs ? import <nixpkgs> {} # todo: pin here
 }:
 {
     pkgs = pkgs;

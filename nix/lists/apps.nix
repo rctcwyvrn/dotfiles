@@ -5,5 +5,7 @@ pkgs: with pkgs; [
     discord
     dolphin
     konsole
-    # steam broken af
+    # steam # more hassle than it's worth, just use the arch version
+    nixGL.nixGLIntel
+    ark
 ]

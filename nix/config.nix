@@ -4,6 +4,9 @@
         nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
             inherit pkgs;
             };
+        nixGL = import (builtins.fetchTarball "https://github.com/guibou/nixGL/archive/main.tar.gz") {
+            inherit pkgs;
+            };
         lily = let 
           namespace = import "/home/lily/code/dotfiles/nix/lists/namespace.nix" {};
         in
